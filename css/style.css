@@ -1,0 +1,131 @@
+#navigation_bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+#company_logo {
+    height: 80px;
+    width: auto;
+    padding-left: 50px;
+}
+
+
+#welcome_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#welcome_carousel {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+#welcome_carousel img {
+    width: 100%;
+    height: 900px;
+    object-fit: cover;
+}
+
+#carousel_caption {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+#carousel_text {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+#carousel_subtext {
+    font-size: 1.25rem;
+    margin-top: 10px;
+}
+
+
+#carousel_prev,
+#carousel_next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    color: white;
+}
+
+#carousel_prev {
+    left: 10px;
+}
+
+#carousel_next {
+    right: 10px;
+}
+
+#navigation_links {
+    display: flex;
+    gap: 20px;
+    padding-right: 70px;
+}
+
+body {
+    margin: 0;
+    background-color: #a8a8a8;
+}
+
+body.dark-mode {
+    background-color: rgb(61, 61, 61);
+}
+
+body.dark-mode #navigation_bar {
+    background-color: rgb(84, 84, 84);
+}
+
+#introduction {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    gap: 30px;
+}
+
+.section-text {
+    flex: 1;
+    text-align: center;
+}
+
+#page_footer {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    border-top: 1px solid #e0e0e0;
+}
+
+#page_footer p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #555555;
+}
+
+body.dark-mode #page_footer {
+    background-color: rgb(84, 84, 84);
+    border-top: 1px solid rgb(100, 100, 100);
+}
+
+body.dark-mode #page_footer p {
+    color: #e0e0e0;
+}
