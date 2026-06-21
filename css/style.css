@@ -1,7 +1,4 @@
 #navigation_bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     background-color: #ffffff;
     position: sticky;
     top: 0;
@@ -11,7 +8,6 @@
 #company_logo {
     height: 80px;
     width: auto;
-    padding-left: 50px;
 }
 
 
@@ -30,7 +26,9 @@
 
 #welcome_carousel img {
     width: 100%;
-    height: 900px;
+    height: 70vh;
+    max-height: 900px;
+    min-height: 360px;
     object-fit: cover;
 }
 
@@ -39,6 +37,7 @@
     bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
+    width: min(90%, 700px);
     color: white;
     text-align: center;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
@@ -77,9 +76,7 @@
 }
 
 #navigation_links {
-    display: flex;
-    gap: 20px;
-    padding-right: 70px;
+    padding-right: 0;
 }
 
 body {
@@ -88,11 +85,29 @@ body {
 }
 
 body.dark-mode {
-    background-color: rgb(61, 61, 61);
+    background-color: #2f2f2f;
+    color: #f1f1f1;
 }
 
 body.dark-mode #navigation_bar {
-    background-color: rgb(84, 84, 84);
+    background-color: #000000;
+}
+
+body.dark-mode #navigation_bar .nav-link {
+    color: #ffffff;
+}
+
+body.dark-mode #dark_mode_toggle {
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+body.dark-mode .navbar-toggler {
+    border-color: #ffffff;
+}
+
+body.dark-mode .navbar-toggler-icon {
+    filter: invert(1);
 }
 
 #introduction {
@@ -121,11 +136,57 @@ body.dark-mode #navigation_bar {
     color: #555555;
 }
 
+#page_footer #footer_links {
+    margin-top: 8px;
+}
+
+#footer_links a {
+    color: #0d6efd;
+}
+
 body.dark-mode #page_footer {
-    background-color: rgb(84, 84, 84);
-    border-top: 1px solid rgb(100, 100, 100);
+    background-color: #3d3d3d;
+    border-top: 1px solid #555555;
 }
 
 body.dark-mode #page_footer p {
     color: #e0e0e0;
+}
+
+body.dark-mode #footer_links a {
+    color: #9ec5fe;
+}
+
+body.dark-mode .border,
+body.dark-mode .bg-light,
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+    background-color: #3d3d3d !important;
+    border-color: #666666 !important;
+    color: #f1f1f1;
+}
+
+body.dark-mode .table {
+    --bs-table-bg: #3d3d3d;
+    --bs-table-color: #f1f1f1;
+    --bs-table-border-color: #666666;
+}
+
+@media (max-width: 576px) {
+    #carousel_text {
+        font-size: 1.75rem;
+    }
+
+    #carousel_subtext {
+        font-size: 1rem;
+    }
+
+    #carousel_prev,
+    #carousel_next {
+        font-size: 24px;
+    }
+
+    #introduction {
+        margin-top: 30px;
+    }
 }
